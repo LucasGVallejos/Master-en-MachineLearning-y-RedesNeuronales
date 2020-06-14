@@ -3,7 +3,7 @@ class Auto:
     pass
     # a class with no methods (yet)
     #pass is a null operation -- when it is executed, nothing happens.
-
+auto = Auto()
 #Podemos ir agregandole atributos de la siguiente manera
 auto.color = 'Rojo'
 auto.puertas = 2
@@ -16,9 +16,10 @@ class Consecionaria:
     #La funcion __init__ refleja un constructor
     def __init__(self, cantidadDeAutos):
         self.cantidadDeAutos = cantidadDeAutos
-        print("Se creo una Consecionaria con una cantidad de ",self.cantidadDeAutos," autos!\n")
+        print("\nSe creo una Consecionaria con una cantidad de ",self.cantidadDeAutos," autos!")
     def AgregarNuevoAuto(self):
         self.cantidadDeAutos +=1
-        print("La nueva cantidad de autos es -> ", self.cantidadDeAutos)
+        print("\nLa nueva cantidad de autos es -> ", self.cantidadDeAutos)
         
 consecionaria = Consecionaria(10)  
+consecionaria.AgregarNuevoAuto()
