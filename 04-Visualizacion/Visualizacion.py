@@ -24,9 +24,9 @@ print('Codigo de Paises -> ', len(codes))
 indicators = data['IndicatorName'].unique().tolist()
 print('Indicadores -> ', len(indicators))
 
-#De Cuantos Años tenemos informacion?
+#De Cuantos Aï¿½os tenemos informacion?
 years = data['Year'].unique().tolist()
-print('Años -> ', len(years))
+print('Aï¿½os -> ', len(years))
 
 #Dentro de que marco temporal nos estamos encontrando?
 print('Desde -> ',min(years),' Hasta -> ',max(years))
@@ -46,7 +46,7 @@ mask2 = data['CountryCode'].str.contains(hist_countryCode)
 total_CO2 = data[mask1 & mask2]
 total_CO2.tail()
 
-#Cómo cambiaron las emisiones a lo largo del tiempo dentro de nuestro pais
+#Cï¿½mo cambiaron las emisiones a lo largo del tiempo dentro de nuestro pais
 years = total_CO2['Year']
 co2 = total_CO2['Value']
 #dibujamos grafico de barras.
@@ -59,10 +59,10 @@ plt.show()
 plt.plot(total_CO2['Year'],total_CO2['Value'])
 
 #Label
-plt.xlabel('Año')
+plt.xlabel('Aï¿½o')
 
 #En Y puedo poner directamente el nombre del indicador
-plt.ylabel('Emisiones de CO2 (Toneladas Métricas per capita)')
+plt.ylabel('Emisiones de CO2 (Toneladas Mï¿½tricas per capita)')
 
 #Label en la figura
 plt.title('Emisiones de CO2 en ARG')
@@ -82,15 +82,15 @@ hist_data
 plt.hist(hist_data, 10, facecolor='green')
 
 plt.xlabel(total_CO2['IndicatorName'].iloc[0])
-plt.ylabel('# de Años')
+plt.ylabel('# de AÃ±os')
 plt.title('Histogram')
 
 plt.grid(True)
 plt.show()
 
-#¿Como esta nuestro pais con respecto a otros paises?
+#ï¿½Como esta nuestro pais con respecto a otros paises?
 
-#Seleccionamos todos los paises del año 2011
+#Seleccionamos todos los paises del aï¿½o 2011
 hist_year = 2011
 
 mask1 = data['IndicatorName'].str.contains(hist_indicator)
@@ -130,7 +130,7 @@ gdp_stage.head()
 
 plt.plot(gdp_stage['Year'].values, gdp_stage['Value'].values)
 
-plt.xlabel('Año')
+plt.xlabel('AÃ±o')
 plt.ylabel(gdp_stage['IndicatorName'].iloc[0])
 
 plt.title('PBI Per Capita Argentina')
